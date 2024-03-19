@@ -10,17 +10,18 @@ public class HangmanGame : MonoBehaviour
     public Text guessedLettersText;
     public Text attemptsText;
 
-    public string[] words = {
-    "Apfel", "Banane", "Orange", "Traube", "Erdbeere", "Kiwi", "Pfirsich", "Wassermelone", "Ananas", "Heidelbeere",
-    "Computer", "Tastatur", "Maus", "Monitor", "Drucker", "Kopfhörer", "Lautsprecher", "Mikrofon", "Laptop", "Tablet",
-    "Baum", "Blume", "Gras", "Sonnenblume", "Gänseblümchen", "Rose", "Tulpe", "Löwenzahn", "Kaktus", "Farn",
-    "Auto", "Fahrrad", "Motorrad", "Bus", "Lastwagen", "Zug", "Flugzeug", "Hubschrauber", "Boot", "Schiff",
-    "Hund", "Katze", "Vogel", "Fisch", "Hamster", "Kaninchen", "Schildkröte", "Schlange", "Eidechse", "Frosch",
-    "Haus", "Wohnung", "Villa", "Hütte", "Schloss", "Zelt", "Iglu", "Bungalow", "Blockhütte", "Landhaus",
-    "Berg", "Hügel", "Tal", "Schlucht", "Plateau", "Klippe", "Vulkan", "Gletscher", "Höhle", "Ozean",
-    "Schule", "Universität", "College", "Bibliothek", "Klassenzimmer", "Laboratorium", "Turnhalle", "Aula", "Mensa", "Spielplatz",
-    "Fußball", "Basketball", "Fußball", "Baseball", "Volleyball", "Tennis", "Golf", "Rugby", "Cricket", "Hockey",
-    "Pizza", "Hamburger", "Sandwich", "Nudeln", "Sushi", "Steak", "Salat", "Suppe", "Burrito", "Taco"
+    string[] words = {
+   "apfel", "banane", "orange", "traube", "erdbeere", "kiwi", "pfirsich", "wassermelone", "ananas", "heidelbeere",
+    "computer", "tastatur", "maus", "monitor", "drucker", "kopfhörer", "lautsprecher", "mikrofon", "laptop", "tablet",
+    "baum", "blume", "gras", "sonnenblume", "gänseblümchen", "rose", "tulpe", "löwenzahn", "kaktus", "farn",
+    "auto", "fahrrad", "motorrad", "bus", "lastwagen", "zug", "flugzeug", "hubschrauber", "boot", "schiff",
+    "hund", "katze", "vogel", "fisch", "hamster", "kaninchen", "schildkröte", "schlange", "eidechse", "frosch",
+    "haus", "wohnung", "villa", "hütte", "schloss", "zelt", "iglu", "bungalow", "blockhütte", "landhaus",
+    "berg", "hügel", "tal", "schlucht", "plateau", "klippe", "vulkan", "gletscher", "höhle", "ozean",
+    "schule", "universität", "college", "bibliothek", "klassenzimmer", "laboratorium", "turnhalle", "aula", "mensa", "spielplatz",
+    "fußball", "basketball", "fußball", "baseball", "volleyball", "tennis", "golf", "rugby", "cricket", "hockey",
+    "pizza", "hamburger", "sandwich", "nudeln", "sushi", "steak", "salat", "suppe", "burrito", "taco"
+
     };
 
     
