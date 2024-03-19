@@ -10,7 +10,20 @@ public class HangmanGame : MonoBehaviour
     public Text guessedLettersText;
     public Text attemptsText;
 
-    private string[] words = { "apple", "banana", "orange", "grape", "strawberry", "kiwi", "peach" };
+    public string[] words = {
+    "Apfel", "Banane", "Orange", "Traube", "Erdbeere", "Kiwi", "Pfirsich", "Wassermelone", "Ananas", "Heidelbeere",
+    "Computer", "Tastatur", "Maus", "Monitor", "Drucker", "Kopfhörer", "Lautsprecher", "Mikrofon", "Laptop", "Tablet",
+    "Baum", "Blume", "Gras", "Sonnenblume", "Gänseblümchen", "Rose", "Tulpe", "Löwenzahn", "Kaktus", "Farn",
+    "Auto", "Fahrrad", "Motorrad", "Bus", "Lastwagen", "Zug", "Flugzeug", "Hubschrauber", "Boot", "Schiff",
+    "Hund", "Katze", "Vogel", "Fisch", "Hamster", "Kaninchen", "Schildkröte", "Schlange", "Eidechse", "Frosch",
+    "Haus", "Wohnung", "Villa", "Hütte", "Schloss", "Zelt", "Iglu", "Bungalow", "Blockhütte", "Landhaus",
+    "Berg", "Hügel", "Tal", "Schlucht", "Plateau", "Klippe", "Vulkan", "Gletscher", "Höhle", "Ozean",
+    "Schule", "Universität", "College", "Bibliothek", "Klassenzimmer", "Laboratorium", "Turnhalle", "Aula", "Mensa", "Spielplatz",
+    "Fußball", "Basketball", "Fußball", "Baseball", "Volleyball", "Tennis", "Golf", "Rugby", "Cricket", "Hockey",
+    "Pizza", "Hamburger", "Sandwich", "Nudeln", "Sushi", "Steak", "Salat", "Suppe", "Burrito", "Taco"
+    };
+
+    
     private string selectedWord;
     private HashSet<char> wrongLetters = new HashSet<char>();
     private HashSet<char> correctLetters = new HashSet<char>();
@@ -66,7 +79,7 @@ public class HangmanGame : MonoBehaviour
                 else if (!wrongLetters.Contains(keyPressed))
                 {
                     wrongLetters.Add(keyPressed);
-
+                    hangman[5 - attempts].SetActive(true);
                     attempts--;
                 }
 
