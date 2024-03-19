@@ -2,10 +2,14 @@
 ```mermaid
 classDiagram
     MonoBehaviour <|-- StartGame
+    MonoBehaviour <|-- RestartGame
     MonoBehaviour <|-- HangManGameManager
    
     class StartGame {
         - GameStart() void
+    }
+    class RestartGame {
+        - GameRestart() void
     }
     class HangManGameManager {
         + wordDisplayText: text
