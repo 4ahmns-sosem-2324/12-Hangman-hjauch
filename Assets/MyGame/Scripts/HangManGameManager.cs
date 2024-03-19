@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
-using TMPro;
+
 
 public class HangmanGame : MonoBehaviour
 {
@@ -29,7 +29,7 @@ public class HangmanGame : MonoBehaviour
     private string selectedWord;
     private HashSet<char> wrongLetters = new HashSet<char>();
     private HashSet<char> correctLetters = new HashSet<char>();
-    private int attempts = 5;
+    private int attempts = 6;
     public GameObject [] hangman;
     public Text winText;
     public Text loseText;
@@ -46,7 +46,7 @@ public class HangmanGame : MonoBehaviour
         selectedWord = words[Random.Range(0, words.Length)];
         wrongLetters.Clear();
         correctLetters.Clear();
-        attempts = 5;
+        attempts = 6;
         UpdateDisplay();
     }
 
@@ -85,7 +85,7 @@ public class HangmanGame : MonoBehaviour
                 else if (!wrongLetters.Contains(keyPressed))
                 {
                     wrongLetters.Add(keyPressed);
-                    hangman[5 - attempts].SetActive(true);
+                    hangman[6 - attempts].SetActive(true);
                     attempts--;
                 }
 
