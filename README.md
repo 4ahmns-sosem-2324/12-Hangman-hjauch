@@ -6,10 +6,10 @@ classDiagram
     MonoBehaviour <|-- HangManGameManager
    
     class StartGame {
-        - GameStart() void
+        + GameStart() void
     }
     class RestartGame {
-        - GameRestart() void
+        + GameRestart() void
     }
     class HangManGameManager {
         + wordDisplayText: text
