@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class HangmanGame : MonoBehaviour
 {
@@ -92,6 +93,7 @@ public class HangmanGame : MonoBehaviour
                 }
                 else if (CheckWin())
                 {
+                    SceneManager.LoadScene("WinScene");
                     Debug.Log("Congratulations! You guessed the word: " + selectedWord);
                 }
             }
