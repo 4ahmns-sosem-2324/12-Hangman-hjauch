@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using Random = UnityEngine.Random;
-using UnityEngine.SceneManagement;
+using TMPro;
 
 public class HangmanGame : MonoBehaviour
 {
@@ -31,6 +31,10 @@ public class HangmanGame : MonoBehaviour
     private HashSet<char> correctLetters = new HashSet<char>();
     private int attempts = 5;
     public GameObject [] hangman;
+    public Text winText;
+    public Text loseText;
+    public GameObject winPanel;
+    public GameObject losePanel;
 
     void Start()
     {
@@ -89,11 +93,15 @@ public class HangmanGame : MonoBehaviour
 
                 if (attempts == 0)
                 {
+                    losePanel.SetActive(true);
+                    loseText.text = "You Lost. The word was: " + selectedWord;
                     Debug.Log("Sorry, you lost. The word was: " + selectedWord);
                 }
                 else if (CheckWin())
                 {
-                    SceneManager.LoadScene("WinScene");
+                    winPanel.SetActive(true);
+                    winText.text = "You Won! Congratulations";
+                    //SceneManager.LoadScene("WinScene");
                     Debug.Log("Congratulations! You guessed the word: " + selectedWord);
                 }
             }
