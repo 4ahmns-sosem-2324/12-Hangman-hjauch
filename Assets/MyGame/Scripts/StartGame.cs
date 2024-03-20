@@ -7,6 +7,6 @@ public class StartGame : MonoBehaviour
 {
     public void GameStart()
     {
-        SceneManager.LoadScene("LevelScene");
+        SceneManager.LoadScene("Hangman");
     }
 }
